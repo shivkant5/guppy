@@ -6485,7 +6485,13 @@ var Guppy = (function () {
     };
 
     Guppy.mouse_down = function (e) {
-        if (e.target.getAttribute("class") == "guppy-button") return;
+        // One of the consequences of this function is that it deactivates the
+        // guppy instance which causes the custom OSK on Oppia to disappear.
+        // To overcome this, whenever Oppia's OSK is clicked, this function call
+        // will be skipped.
+        if (
+          e.target.getAttribute("class").startsWith("oppia-osk-btn") ||
+          e.target.getAttribute("class") == "guppy-button") return;
         var n = e.target;
         Guppy.kb.is_mouse_down = true;
         while (n != null) {
