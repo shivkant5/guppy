@@ -50,7 +50,7 @@
     background:url('./icons/keyboard.png') center no-repeat;
 }
 .guppy_buttons div.help{
-    background:url('./icons/help.png') center no-repeat;
+    background:url('/dist/oppia-angular/icons/help.png') center no-repeat;
 }
 .guppy_buttons div.symbols{
     background:url('./icons/symbols.png') center no-repeat;
